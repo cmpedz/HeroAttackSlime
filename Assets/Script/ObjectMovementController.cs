@@ -15,13 +15,13 @@ public abstract class ObjectMovementController : MonoBehaviour
     
 
     protected Animator animator;
-    void Start()
+    protected void Start()
     {
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         ActiveIdleStatus();
 
@@ -30,10 +30,10 @@ public abstract class ObjectMovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Run();
+        Move();
     }
 
-    public abstract void Run();
+    public abstract void Move();
 
     private void ActiveIdleStatus()
     {

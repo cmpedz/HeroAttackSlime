@@ -5,18 +5,14 @@ using UnityEngine;
 
 public class SlimeMovement : ObjectMovementController
 {
-    [SerializeField] private Transform visionPoint;
-
-    [SerializeField] private float visisionRange;
-
-    [SerializeField] private LayerMask target;
+    [SerializeField] private ObjectVisionController vision;
 
     [SerializeField] private SlimeAttack slimeAttack;
 
 
-    public override void Run()
+    public override void Move()
     {
-        Collider2D player = Physics2D.OverlapCircle(visionPoint.position, visisionRange, target);
+        Collider2D player = vision.GetEnemy();
 
         bool canAttackPlayer = slimeAttack.DetectEnemy() != null;
 
@@ -32,12 +28,6 @@ public class SlimeMovement : ObjectMovementController
         }   
     }
 
-    private void OnDrawGizmos()
-    {
-        if (visionPoint != null)
-        {
-            Gizmos.DrawWireSphere(this.visionPoint.position, visisionRange);
-        }
-    }
+    
 
 }

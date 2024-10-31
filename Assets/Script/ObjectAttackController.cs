@@ -14,7 +14,8 @@ public abstract class ObjectAttackController : MonoBehaviour
 
     [SerializeField] protected float dam;
 
-    protected bool isAttacking = false;
+    protected bool isAttackingEnemy = false;
+    public bool IsAttackingEnemy { get { return isAttackingEnemy; } set { isAttackingEnemy = value; } }
 
     protected void Start()
     {
@@ -36,32 +37,33 @@ public abstract class ObjectAttackController : MonoBehaviour
 
     public abstract void AttackEnenmy();
 
-    public void CauseDamOnEnemy(ObjectHealthController enemy, float timeGetDam) {
+    public bool CauseDamOnEnemy(ObjectHealthController enemy, float timeGetDam) {
 
 
-
-        if (enemy == null) {
-            isAttacking = false;
-            return;
-        }
-
-        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= timeGetDam && isAttacking)
+        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= timeGetDam && isAttackingEnemy && enemy != null)
         {
             enemy.ReceiveDamFromEnemy(this.dam);
 
             Debug.Log(enemy.ToString() + " received dam");
 
-            isAttacking = false;
+            isAttackingEnemy = false;
+
+            return true;
         }
+
+        return false;
     }
 
-    public void ActiveAttackStatus() {
+    public void ActiveAttackStatus(ObjectHealthController enemy) {
 
         string attackTrigger = (string)KeyValueAnimatorController.GetValueFromKeyObject(KeyInAnimationStatusDictionary.Attack);
 
         this.animator.SetTrigger(attackTrigger);
 
-        isAttacking = true;
+        if (enemy != null) {
+            isAttackingEnemy = true;
+        }
+        
     }
     
 

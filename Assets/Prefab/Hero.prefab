@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 2534791938839101506}
   - component: {fileID: 1187657602585210705}
   - component: {fileID: 7913436523639856395}
+  - component: {fileID: 7629598159581731222}
   m_Layer: 6
   m_Name: Hero
   m_TagString: Untagged
@@ -263,6 +264,22 @@ MonoBehaviour:
   healthBar: {fileID: 6504369205194582112}
   maxHealth: 20
   hurtEffect: {fileID: 0}
+--- !u!114 &7629598159581731222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4649251402695833055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23746606ede86ee4096588980b791012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activities:
+  - {fileID: 7913436523639856395}
+  - {fileID: 1187657602585210705}
+  - {fileID: 8896317485421711593}
 --- !u!1001 &5295365333596521491
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -21,9 +21,9 @@ public class SlimeAttack : ObjectAttackController
 
         Debug.Log("slime detect player : " + player);
 
-        if (player != null && Time.time - timeRun >= timeWattingForNextAttack && !isAttacking) {
+        if (player != null && Time.time - timeRun >= timeWattingForNextAttack && !isAttackingEnemy) {
 
-            ActiveAttackStatus();
+            ActiveAttackStatus(player);
 
             timeRun = Time.time;
         }

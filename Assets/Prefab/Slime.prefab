@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 2110500968010103543}
   - component: {fileID: 9199656017109529890}
   - component: {fileID: 5470253035545594085}
+  - component: {fileID: 1855954345767334422}
+  - component: {fileID: 5609541516352862489}
   m_Layer: 7
   m_Name: Slime
   m_TagString: Untagged
@@ -81,7 +83,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -50695413
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -647970440, guid: 5752957cb8f405144b262ae83d7c84b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -128,11 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedRun: 4
   jumpForce: 0
-  visionPoint: {fileID: 2125431340751510605}
-  visisionRange: 5
-  target:
-    serializedVersion: 2
-    m_Bits: 64
+  vision: {fileID: 5609541516352862489}
   slimeAttack: {fileID: 5452481131054205791}
 --- !u!114 &5452481131054205791
 MonoBehaviour:
@@ -241,6 +239,39 @@ MonoBehaviour:
   maxHealth: 6
   hurtEffect: {fileID: 578861666603369201, guid: bb86d5c35b503ec41898d53f423b8c3c, type: 3}
   diedEffect: {fileID: 7060463297657070695, guid: 3297a277a7167084bab99fe5e6f1f403, type: 3}
+--- !u!114 &1855954345767334422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2686505909784550877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23746606ede86ee4096588980b791012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activities:
+  - {fileID: 1377486418367707516}
+  - {fileID: 5452481131054205791}
+  - {fileID: 5470253035545594085}
+--- !u!114 &5609541516352862489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2686505909784550877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64e715ae74a93d47ad0807e080adbef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visionPoint: {fileID: 2125431340751510605}
+  visisionRange: 3
+  target:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &5027572655243962730
 GameObject:
   m_ObjectHideFlags: 0

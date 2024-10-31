@@ -11,9 +11,9 @@ public class HeroAttackController : ObjectAttackController
         ObjectHealthController enemy = this.DetectEnemy();
 
 
-        if (Input.GetMouseButtonDown(0) && !isAttacking) {
+        if (Input.GetMouseButtonDown(0) && !isAttackingEnemy) {
 
-            ActiveAttackStatus();
+            ActiveAttackStatus(enemy);
 
         }
 
