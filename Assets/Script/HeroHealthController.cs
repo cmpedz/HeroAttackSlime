@@ -9,8 +9,4 @@ public class HeroHealthController : ObjectHealthController
         
     }
 
-    public override void ActiveHurtEffect()
-    {
-        
-    }
 }

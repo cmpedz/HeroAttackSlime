@@ -193,6 +193,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1496c4f86293ffb4a9fe8496b5c315c3, type: 3}
+--- !u!1001 &245944572
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 636475016427115500, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: TriggerModule.primitives.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 636475016427115500, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: TriggerModule.primitives.Array.data[0]
+      value: 
+      objectReference: {fileID: 2118876198}
+    - target: {fileID: 2224397793640460732, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224397793640460732, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224397793640460732, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.020170212
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224397793640460732, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224397793640460732, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224397793640460732, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224397793640460732, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224397793640460732, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224397793640460732, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224397793640460732, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442961820454722330, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: m_Name
+      value: SlimeKingSkill2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5442961820454722330, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
 --- !u!4 &284718578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5517638889985103784, guid: 1496c4f86293ffb4a9fe8496b5c315c3, type: 3}
@@ -14805,6 +14874,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5681571341197918230, guid: 0128b2c81f4703d449da52b0f1fb9281, type: 3}
   m_PrefabInstance: {fileID: 2041153586}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1232838330 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1321382385548071626, guid: 26caaa2dd840994488df68d709acfd8d, type: 3}
+  m_PrefabInstance: {fileID: 5054702932497504972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab983f0ee50fb84cb1bce7a3681bb7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1269839305
 GameObject:
   m_ObjectHideFlags: 0
@@ -26372,6 +26452,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1321382385548071626, guid: 26caaa2dd840994488df68d709acfd8d, type: 3}
+      propertyPath: bulletsEffect
+      value: 
+      objectReference: {fileID: 636475016427115500, guid: d2c15b31a4ae81e4d98f45525f0ea884, type: 3}
+    - target: {fileID: 3434291905378824781, guid: 26caaa2dd840994488df68d709acfd8d, type: 3}
+      propertyPath: objectSkills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434291905378824781, guid: 26caaa2dd840994488df68d709acfd8d, type: 3}
+      propertyPath: objectSkills.Array.data[1]
+      value: 
+      objectReference: {fileID: 1232838330}
     - target: {fileID: 4108005183016601828, guid: 26caaa2dd840994488df68d709acfd8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.73
@@ -26416,6 +26508,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeKing
       objectReference: {fileID: 0}
+    - target: {fileID: 8209378056629171838, guid: 26caaa2dd840994488df68d709acfd8d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209378056629171838, guid: 26caaa2dd840994488df68d709acfd8d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26436,3 +26536,4 @@ SceneRoots:
   - {fileID: 3231547438328552664}
   - {fileID: 1664418377}
   - {fileID: 5054702932497504972}
+  - {fileID: 245944572}

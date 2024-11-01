@@ -55,7 +55,13 @@ public abstract class ObjectHealthController : MonoBehaviour
 
     }
 
-    public abstract void ActiveHurtEffect();
+    public void ActiveHurtEffect() {
+        if (hurtEffect != null)
+        {
+            Instantiate(hurtEffect, transform.position, Quaternion.identity);
+
+        }
+    }
 
     public abstract void ActiveEventWhenObjectDied();
 }

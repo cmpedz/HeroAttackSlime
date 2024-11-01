@@ -10,7 +10,8 @@ public enum KeyInAnimationStatusDictionary
     ChangeMove,
     Jump,
     Hurt,
-    Attack
+    Attack,
+    SpecialAttack
 }
 
 public class KeyValueAnimatorController
@@ -27,7 +28,9 @@ public class KeyValueAnimatorController
 
         { KeyInAnimationStatusDictionary.Hurt, "Hurt"},
 
-        { KeyInAnimationStatusDictionary.Attack, "Attack"}
+        { KeyInAnimationStatusDictionary.Attack, "Attack"},
+
+        { KeyInAnimationStatusDictionary.SpecialAttack, "SpecialAttack"}
     };
 
 
