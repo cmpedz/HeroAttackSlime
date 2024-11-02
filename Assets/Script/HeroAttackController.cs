@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class HeroAttackController : ObjectAttackController
 {
+    
 
     public override void AttackEnenmy()
     {
@@ -14,6 +15,8 @@ public class HeroAttackController : ObjectAttackController
         if (Input.GetMouseButtonDown(0) && !isAttackingEnemy) {
 
             ActiveAttackStatus(enemy);
+
+           
 
         }
 

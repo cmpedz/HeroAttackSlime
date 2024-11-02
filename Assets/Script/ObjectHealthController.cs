@@ -12,6 +12,10 @@ public abstract class ObjectHealthController : MonoBehaviour
 
     [SerializeField] protected ParticleSystem hurtEffect;
 
+    [SerializeField] private AudioManager audioManager;
+
+    [SerializeField] private AudioClip soundEffect;
+
     private Animator animator;
     void Start()
     {
@@ -59,6 +63,10 @@ public abstract class ObjectHealthController : MonoBehaviour
         if (hurtEffect != null)
         {
             Instantiate(hurtEffect, transform.position, Quaternion.identity);
+            if (audioManager != null && soundEffect != null)
+            {
+                audioManager.PlaySFX(soundEffect);
+            }
 
         }
     }

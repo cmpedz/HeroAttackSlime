@@ -10,6 +10,10 @@ public abstract class ObjectAttackController : MonoBehaviour
 
     [SerializeField] private LayerMask target;
 
+    [SerializeField] private AudioManager audioManager;
+
+    [SerializeField] private AudioClip soundEffect;
+
     protected Animator animator;
 
     [SerializeField] protected float dam;
@@ -43,6 +47,12 @@ public abstract class ObjectAttackController : MonoBehaviour
         if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= timeGetDam && isAttackingEnemy && enemy != null)
         {
             enemy.ReceiveDamFromEnemy(this.dam);
+
+
+            if (audioManager != null && soundEffect != null) {
+                audioManager.PlaySFX(soundEffect);
+            }
+            
 
             Debug.Log(enemy.ToString() + " received dam");
 

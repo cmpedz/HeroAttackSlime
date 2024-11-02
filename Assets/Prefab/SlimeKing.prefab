@@ -59,7 +59,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4108005183016601828
 Transform:
   m_ObjectHideFlags: 0
@@ -172,6 +172,8 @@ MonoBehaviour:
   minDistance: 3
   gravity: 9.8
   kingSlimeAttack: {fileID: 1798122480136743312}
+  audioManager: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: ae64b6723fde52646aac44a0e32f3a70, type: 3}
 --- !u!114 &3919477435707655664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +325,8 @@ MonoBehaviour:
   target:
     serializedVersion: 2
     m_Bits: 64
+  audioManager: {fileID: 0}
+  soundEffect: {fileID: 0}
   dam: 10
   kingSlimeMovement: {fileID: 6880202717027855705}
 --- !u!114 &8063772883150298394
@@ -340,7 +344,11 @@ MonoBehaviour:
   healthBar: {fileID: 5999095309697710541}
   maxHealth: 50
   hurtEffect: {fileID: 578861666603369201, guid: bb86d5c35b503ec41898d53f423b8c3c, type: 3}
+  audioManager: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: b6488c91ca3644549be4764841ceffb9, type: 3}
   diedEffect: {fileID: 7060463297657070695, guid: 3297a277a7167084bab99fe5e6f1f403, type: 3}
+  timeDelay: 2
+  winMenu: {fileID: 0}
 --- !u!114 &3434291905378824781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectSkills:
+  - {fileID: 1321382385548071626}
   - {fileID: 1081930366007211125}
 --- !u!114 &1081930366007211125
 MonoBehaviour:

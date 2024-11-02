@@ -22,6 +22,9 @@ public class BossStageInitionControllerSystem : MonoBehaviour
 
     [SerializeField] private Transform limitRightPoint;
 
+    [SerializeField] private GameObject slimeBoss;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +39,13 @@ public class BossStageInitionControllerSystem : MonoBehaviour
 
             SetUpDeadZoneForPlayerCamera(deadZoneWidth, deadZoneHeight);
 
+            slimeBoss.SetActive(true);
+
             LimitMovementRangeOfPlayer();
 
             ChangeCamera();
+
+            
 
         }
         else {

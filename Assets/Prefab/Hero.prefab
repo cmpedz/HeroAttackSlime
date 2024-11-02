@@ -159,6 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedRun: 5
   jumpForce: 7
+  limitLeftPoint: {fileID: 0}
+  limitRightPoint: {fileID: 0}
 --- !u!61 &6756808681701799338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -248,6 +250,8 @@ MonoBehaviour:
   target:
     serializedVersion: 2
     m_Bits: 128
+  audioManager: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: b6488c91ca3644549be4764841ceffb9, type: 3}
   dam: 2
 --- !u!114 &7913436523639856395
 MonoBehaviour:
@@ -262,8 +266,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6504369205194582112}
-  maxHealth: 20
+  maxHealth: 100
   hurtEffect: {fileID: 0}
+  audioManager: {fileID: 0}
+  soundEffect: {fileID: 0}
+  loseMenu: {fileID: 0}
 --- !u!114 &7629598159581731222
 MonoBehaviour:
   m_ObjectHideFlags: 0

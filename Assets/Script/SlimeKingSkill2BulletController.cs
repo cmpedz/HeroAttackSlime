@@ -12,6 +12,8 @@ public class SlimeKingSkill2BulletController : MonoBehaviour
 
     [SerializeField] private float particleRadius;
 
+    [SerializeField] private float damCause = 2;
+
     void Start()
     {
         particleSystem = GetComponent<ParticleSystem>();
@@ -24,7 +26,7 @@ public class SlimeKingSkill2BulletController : MonoBehaviour
         
         particles.Clear();
 
-        int numInside = particleSystem.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, particles);
+        int numInside = particleSystem.GetTriggerParticles(ParticleSystemTriggerEventType.Inside, particles);
 
         Debug.Log("check particle system quantity : " +  numInside);
 
@@ -34,8 +36,11 @@ public class SlimeKingSkill2BulletController : MonoBehaviour
 
             Collider2D player = Physics2D.OverlapCircle(particles[i].position, particleRadius, target);
 
+            Debug.Log("check particles position : " + particles[i].position);
+
             if (player != null) {
                 Debug.Log(particles[i].ToString() + " interact with player ");
+                player.GetComponent<HeroHealthController>().ReceiveDamFromEnemy(damCause);
             }
 
            

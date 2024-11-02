@@ -8,7 +8,7 @@ public class KingSlimeSkill2 : ObjectSkill
     // Start is called before the first frame update
     [SerializeField] private KingSlimeStatusController kingSlimeStatusController;
 
-    [SerializeField] private ParticleSystem bulletsEffect;
+    [SerializeField] private GameObject bulletsEffect;
 
     private bool isCapableUsingSkill2 = false;
 
@@ -30,7 +30,7 @@ public class KingSlimeSkill2 : ObjectSkill
 
             if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > timeAttack && bulletsEffect != null) {
 
-                Instantiate(bulletsEffect, transform.position, Quaternion.identity);
+                Instantiate(bulletsEffect, transform.position, Quaternion.identity).SetActive(true);
 
                 isCapableUsingSkill2 = false;
 

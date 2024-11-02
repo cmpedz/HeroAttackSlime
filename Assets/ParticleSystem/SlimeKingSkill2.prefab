@@ -118,7 +118,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
+      scalar: 7
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -289,8 +289,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.25
-      minScalar: 0.5
+      scalar: 0.5
+      minScalar: 0.875
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -666,7 +666,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 17
+    type: 0
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -872,7 +872,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 150
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -3794,7 +3794,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 119
+      m_Bits: 55
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -3804,13 +3804,14 @@ ParticleSystem:
   TriggerModule:
     enabled: 1
     serializedVersion: 2
-    inside: 0
+    inside: 2
     outside: 0
     enter: 2
     exit: 0
     colliderQueryMode: 0
-    radiusScale: 0.5
-    primitives: []
+    radiusScale: 1
+    primitives:
+    - {fileID: 0}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -3936,7 +3937,7 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 1
+    enabled: 0
     mode: 0
     ratio: 1
     lifetime:
@@ -4780,7 +4781,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 0e7788c6aea3d964c9e45081b34925f0, type: 2}
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4848,8 +4848,9 @@ MonoBehaviour:
   particleSystem: {fileID: 636475016427115500}
   target:
     serializedVersion: 2
-    m_Bits: 0
-  particleRadius: 0
+    m_Bits: 64
+  particleRadius: 1
+  damCause: 2
 --- !u!61 &2961797919482308231
 BoxCollider2D:
   m_ObjectHideFlags: 0

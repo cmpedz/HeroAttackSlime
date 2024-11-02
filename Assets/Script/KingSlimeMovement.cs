@@ -30,7 +30,10 @@ public class KingSlimeMovement : ObjectMovementController
     private Vector3 earthSurface;
     // Start is called before the first frame update
 
- 
+    [SerializeField] private AudioManager audioManager;
+
+    [SerializeField] private AudioClip soundEffect;
+
     new void Start()
     {
         base.Start();
@@ -58,6 +61,11 @@ public class KingSlimeMovement : ObjectMovementController
             earthSurface = transform.position;
 
             this.direction = Vector3.zero;
+
+            if (audioManager != null && soundEffect != null)
+            {
+                audioManager.PlaySFX(soundEffect);
+            }
 
         }
     }
